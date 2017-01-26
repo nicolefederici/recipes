@@ -1,0 +1,56 @@
+class UserController < ApplicationController
+
+  get '/signup' do
+    if !logged_in?
+      erb :'users/create_user'
+    else
+      redirect to '/projects'
+    end
+  end
+
+  post '/signup' do
+    if !logged_in?
+      @user = User.new(params)
+      if @user.save
+        session[:user_id] = @user.id
+        redirect to '/projects'
+      else 
+        redirect to '/signup'
+      end
+    end
+  end
+
+
+  get '/login' do
+    if !logged_in?
+      erb :'users/login'
+    else
+      redirect '/projects'
+    end
+  end
+
+  post '/login' do
+    user = User.find_by(username: params[:username])
+    if user && user.authenticate(params[:password])
+      session[:user_id] = user.id
+      redirect '/projects'
+    else 
+      redirect to '/signup'
+    end
+  end
+
+  get '/users/:slug/show' do
+    @user = User.find_by_slug(params[:slug])
+    erb :'users/show'
+  end
+
+
+  get '/logout' do
+    if logged_in? 
+      session.destroy
+      redirect to '/login'
+    else
+      redirect to '/login'
+    end
+  end
+end

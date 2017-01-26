@@ -1,30 +1,39 @@
-> **Note**: This branch (master) contains a skeleton without any app code, perfect for creating a _new_ application or challenge. If you're looking for an example app built with this skeleton, take a look at the [example](/../..//tree/example) branch which includes basic CRUD and RSpec tests.
+![Logo of the project]
 
-### Purpose
-The Sinatra Skeleton:
+# Recipes
+> Recipes
 
-1. Provides a foundation for building challenges or creating a new Sinatra application.
-2. Demonstrates a reasonable set of practices around building Sinatra applications.
-3. Eases the transition to Rails for Dev Bootcamp students
+Recipes is a Sinatra CRUD App that provides the architecture, organized storage for text and multi-media links, and interconnectivity for a group of cooks to share recipes. 
 
-### Quickstart
+## Installing / Getting started
 
-1.  `bundle install`
-2.  `shotgun config.ru`
+To get Recipes up and running locally on your machine, open up a terminal and type this:
 
-As needed, create models & migrations with the `rake` tasks:
-
+```shell
+git clone https://github.com/nicolefederici/recipes.git
+cd recipes
+bundle install 
+shotgun
 ```
-rake generate:migration  # Create an empty migration in db/migrate, e.g., rake generate:migration NAME=create_tasks
-rake generate:model      # Create an empty model in app/models, e.g., rake generate:model NAME=User
-```
+Then, open your browser and navigate to localhost:9393/
 
-### Contributing
+You will be asked to create a username and password, after which you will be able to create recipes. 
 
-We would love for you to help make the skeleton more awesome, There are three ways to contribute:
 
-1. Ask for a bug fix or enhancement!
-2. Submit a pull request for a bug fix or enhancement!
-3. Code review an open pull request!
+## Contact Me
 
-Be prepared to give and receive specific, actionable, and kind feedback!
+Send me a message through LinkedIn:
+https://www.linkedin.com/in/nicolefederici
+(bugs, problems, questions, feature requests, administration)
+
+## Features
+
+A non-logged in user can see all recipes and look at an individual recipe 
+A logged in user can see her recipes in a list labeled as such, 
+and she can create, edit and delete her own recipes only.
+
+## Licensing
+
+MIT License
+
+

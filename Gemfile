@@ -1,29 +1,21 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
-# PostgreSQL driver
-gem 'pg'
-
-# Sinatra driver
 gem 'sinatra'
-gem 'sinatra-contrib'
-
-gem 'activesupport'
-gem 'activerecord'
-gem 'bcrypt'
-
+gem 'activerecord', :require => 'active_record'
+gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
 gem 'rake'
-
+gem 'require_all'
+gem 'sqlite3'
+gem 'thin'
 gem 'shotgun'
+gem 'pry'
+gem 'rb-readline'
+gem 'bcrypt'
+gem "tux"
 
 group :test do
-  gem 'database_cleaner', '~> 1.4.1'
-  gem 'shoulda-matchers'
-  gem 'rack-test'
   gem 'rspec'
   gem 'capybara'
-end
-
-group :test, :development do
-  gem 'factory_girl'
-  gem 'faker'
+  gem 'rack-test'
+  gem 'database_cleaner', git: 'https://github.com/bmabey/database_cleaner.git'
 end
