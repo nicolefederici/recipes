@@ -29,11 +29,12 @@ class UserController < ApplicationController
     end
   end
 
+#authenticate is bcrypt method, not active record, remember. 
   post '/login' do
     user = User.find_by(username: params[:username])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect '/projects'
+      redirect '/recipes'
     else 
       redirect to '/signup'
     end
