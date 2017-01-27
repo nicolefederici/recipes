@@ -311,24 +311,15 @@ body{
 </style>
 
 <div id="p-title"><a href="/<%=@project.pslug%>/index"><%=@project.title%></a></div>
-<!-- AUTHOR OF THE NEWCHUNK -->
+<!-- AUTHOR -->
 <div id="name"><%= @newchunk_author.username %></div>
-<!-- OLDCHUNK TITLE -->
+<!--  TITLE -->
  <div id="o-title"><a href="/<%=@project.pslug%>/<%= @oldchunk.oslug %>/index"><%= @oldchunk.title %></a></div> 
  
-<!--OLDCHUNK TEXT
+<!--TEXT
  -->  
 <div id="oldchunk-text"><%= h(@oldchunk.text).gsub(/\n/, '<br/>') %></div><br>
    
-<!-- THE FOUR CLICKABLE ICONS FOR THE VIDEO, PICS, SOUND, AND SCORE -->
-<!--  -->
-<div id="video"><a href="<%= @newchunk.video_link %>" target="_blank"><img src="/images/video-camera.svg"></a></div>
-          
-<div id="image"><a href="<%= @newchunk.image_link %>" target="_blank"><img src="/images/camera.svg"></a></div>
-          
-<div id="sound"><a href="<%= @newchunk.sound_link %>" target="blank"><img src="/images/soundcloud.svg"></a></div>
-<!--here is the stuff within the newchunk box-
--(votes, title, and text of new idea scene)- -->
 
 <div id="newchunk-title"><%= @newchunk.title %></div>
 

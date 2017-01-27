@@ -11,8 +11,10 @@ class ApplicationController < Sinatra::Base
     set :session_secret, "zounds"
   end
 
+#I put the slash route in the application controller because it has no loyalties. One has to start here.
+  
   get '/' do
-    erb :index
+    erb :'recipes/index'
   end
 
    helpers do

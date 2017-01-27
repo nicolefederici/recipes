@@ -2,9 +2,9 @@ class UserController < ApplicationController
 
   get '/signup' do
     if !logged_in?
-      erb :'users/create_user'
+      erb :'users/new'
     else
-      redirect to '/projects'
+      redirect to '/recipes'
     end
   end
 
@@ -13,7 +13,7 @@ class UserController < ApplicationController
       @user = User.new(params)
       if @user.save
         session[:user_id] = @user.id
-        redirect to '/projects'
+        redirect to '/recipes'
       else 
         redirect to '/signup'
       end
@@ -25,7 +25,7 @@ class UserController < ApplicationController
     if !logged_in?
       erb :'users/login'
     else
-      redirect '/projects'
+      redirect '/recipes'
     end
   end
 

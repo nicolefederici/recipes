@@ -1,37 +1,37 @@
 class RecipeController < ApplicationController 
 
   # index route
-  get '/projects' do
-    @projects = Project.all 
-    erb :'projects/index'
+  get '/recipes' do
+    @recipes = Recipe.all 
+    erb :'recipes/index'
   end 
 
   # show route
-  get '/projects/:id' do 
-    @project = Project.find_by_id(params[:id])
-    if @project 
-      erb :'/projects/show'
+  get '/recipes/:id' do 
+    @recipe = Recipe.find_by_id(params[:id])
+    if @recipe 
+      erb :'/recipes/show'
     else 
-      flash[:error] = "Unable to find that project"
-      redirect to '/projects'
+      flash[:error] = "Unable to find that recipe"
+      redirect to '/recipes'
     end 
   end
 
   # new route 
-  get '/projects/new' do 
-    @project = Project.new 
-    erb :'/projects/new'
+  get '/recipes/new' do 
+    @recipe = Recipe.new 
+    erb :'/recipes/new'
   end
 
   # create route 
-  post '/projects' do 
-    @project = Project.new(params)
-    if @project.save 
-      flash[:notice] = "#{@project.name} was created"
-      redirect to "/project/#{@project.id}"
+  post '/recipes' do 
+    @recipe = Recipe.new(params)
+    if @recipe.save 
+      flash[:notice] = "#{@recipe.name} was created"
+      redirect to "/recipes/#{@recipe.id}"
     else 
-      flash[:error] = @project.errors.full_messages
-      redirect to '/projects/new'
+      flash[:error] = @recipe.errors.full_messages
+      redirect to '/recipes/new'
     end 
   end
 
