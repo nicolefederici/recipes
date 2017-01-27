@@ -6,6 +6,13 @@ class RecipeController < ApplicationController
     erb :'recipes/index'
   end 
 
+# new route 
+  get '/recipes/new' do 
+    @recipe = Recipe.new 
+    erb :'/recipes/new'
+  end
+
+
   # show route
   get '/recipes/:id' do 
     @recipe = Recipe.find_by_id(params[:id])
@@ -17,12 +24,7 @@ class RecipeController < ApplicationController
     end 
   end
 
-  # new route 
-  get '/recipes/new' do 
-    @recipe = Recipe.new 
-    erb :'/recipes/new'
-  end
-
+  
   # create route 
   post '/recipes' do 
     @recipe = Recipe.new(params)

@@ -47,14 +47,14 @@ body{
     border-color: transparent;
   }
 
-  .projects a {
+  .recipes a {
     text-decoration: none;
     color: #2fa2bd;
     font-size: 17px;
     letter-spacing: 6px;
   }
 
-  .projects {
+  .recipes {
     width:620px;
     height:40px;
     font-size: 15px;
@@ -64,7 +64,7 @@ body{
     font-weight: bold;
   }
 
-  #projects-container {
+  #recipes-container {
     top: 357px;
     left: 145px;
     position: fixed;
@@ -73,7 +73,7 @@ body{
     width: 800px;
   }
   
-  #create-project {
+  #create-recipe {
     position:fixed;
     left:786px;
     top:400px;
@@ -100,20 +100,20 @@ body{
 
 </style>
 
-<div id="try-box">hypermedia wonderland</div>
-  <div id="subtitle"> COLLABORATIVE COMPOSITION PLATFORM</div>
+<div id="try-box">Federici Family Recipes</div>
+  <div id="subtitle"> recipes, stories, and other media</div>
 
 
-<!--these buttons will be a series of links attached to buttons that when pushed, will take you to the index page of a particular project-->
+<!--these buttons will be a series of links attached to buttons that when pushed, will take you to the index page of a particular recipe-->
  
 
-  <div id="projects-container"><% @projects.each do |project| %>
-    <div class="projects"><a href="/<%=project.pslug%>/index"><%= project.title %></a><br><br></div>
+  <div id="recipes-container"><% @recipes.each do |recipe| %>
+    <div class="recipes"><a href="/<%=recipe.pslug%>/index"><%= recipe.title %></a><br><br></div>
     <% end %></div>
     
-    <div id="create-text">create a new project</div>
+    <div id="create-text">create a new recipe</div>
 
-    <div id="create-project"><a href='/projects/new'><img src="/images/plus.svg"></a></div>
+    <div id="create-recipe"><a href='/recipes/new'><img src="/images/plus.svg"></a></div>
  
  
 
