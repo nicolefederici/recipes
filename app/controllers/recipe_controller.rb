@@ -36,48 +36,48 @@ class RecipeController < ApplicationController
   end
 
   # edit route 
-  get '/projects/:id/edit' do 
-    @project = Project.find_by_id(params[:id])
-    if @project 
-      erb :'/projects/edit'
+  get '/recipes/:id/edit' do 
+    @recipe = Recipe.find_by_id(params[:id])
+    if @recipe 
+      erb :'/recipes/edit'
     else 
-      flash[:error] = "Unable to find that project"
-      redirect to '/projects'
+      flash[:error] = "Unable to find that recipe"
+      redirect to '/recipes'
     end 
   end
 
-  put '/projects/:id' do 
-    @project = Project.find_by_id(params[:id])
-    if @project.update(name: params[:name], description: params[:description])
-      flash[:notice] = "#{@project.name} was successfully updated!"
-      redirect to "/projects/#{@project.id}"
+  put '/recipes/:id' do 
+    @recipe = Recipe.find_by_id(params[:id])
+    if @recipe.update(name: params[:name], description: params[:description])
+      flash[:notice] = "#{@recipe.name} was successfully updated!"
+      redirect to "/recipes/#{@recipe.id}"
     else 
-      flash[:error] = @project.errors.full_messages
-      redirect to "/projects/#{@project.id}/edit"
+      flash[:error] = @recipe.errors.full_messages
+      redirect to "/recipes/#{@recipe.id}/edit"
     end
   end
 
-  delete '/projects/:id' do 
-    @project = Project.find_by_id(params[:id])
-    if @project 
-      @project.destroy 
-      flash[:notice] = "#{@project.name} was destroyed!"
+  delete '/recipes/:id' do 
+    @recipe = Recipe.find_by_id(params[:id])
+    if @recipe 
+      @recipe.destroy 
+      flash[:notice] = "#{@recipe.name} was destroyed!"
     else 
-      flash[:error] = "Unable to find that project"
+      flash[:error] = "Unable to find that recipe"
     end
-    redirect to "/projects"
+    redirect to "/recipes"
   end
 
-  get '/projects/:project_id/chunks' do
-    @project = Project.find_by_id(params[:project_id])
-    @chunks = @project.chunks 
+  get '/recipes/:recipe_id/chunks' do
+    @recipe = Recipe.find_by_id(params[:recipe_id])
+    @chunks = @recipe.chunks 
     erb :'chunks/index'
   end 
 
-  get '/projects/:project_id/chunks/:id' do
+  get '/recipes/:recipe_id/chunks/:id' do
     @chunk = Chunk.find_by_id(params[:id])
     @chunk.destroy 
-    redirect to "/projects/#{params[:project_id]}"
+    redirect to "/recipes/#{params[:recipe_id]}"
   end
 
 end
