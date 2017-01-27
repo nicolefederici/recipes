@@ -68,17 +68,8 @@ class RecipeController < ApplicationController
     redirect to "/recipes"
   end
 
-  get '/recipes/:recipe_id/chunks' do
-    @recipe = Recipe.find_by_id(params[:recipe_id])
-    @chunks = @recipe.chunks 
-    erb :'chunks/index'
-  end 
-
-  get '/recipes/:recipe_id/chunks/:id' do
-    @chunk = Chunk.find_by_id(params[:id])
-    @chunk.destroy 
-    redirect to "/recipes/#{params[:recipe_id]}"
-  end
+  
+  
 
 end
 
