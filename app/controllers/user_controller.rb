@@ -29,7 +29,7 @@ class UserController < ApplicationController
     end
   end
 
-#authenticate is bcrypt method, not active record, remember. 
+#authenticate is an active record method that dips into bcrypt, remember. 
   post '/login' do
     user = User.find_by(username: params[:username])
     if user && user.authenticate(params[:password])
