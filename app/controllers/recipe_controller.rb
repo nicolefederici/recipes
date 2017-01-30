@@ -19,7 +19,7 @@ class RecipeController < ApplicationController
     if @recipe 
       erb :'/recipes/show'
     else 
-      flash[:error] = "Unable to find that recipe"
+      # flash[:error] = "Unable to find that recipe"
       redirect to '/recipes'
     end 
   end
@@ -29,10 +29,10 @@ class RecipeController < ApplicationController
   post '/recipes' do 
     @recipe = Recipe.new(params)
     if @recipe.save 
-      flash[:notice] = "#{@recipe.name} was created"
+      # flash[:notice] = "#{@recipe.name} was created"
       redirect to "/recipes/#{@recipe.id}"
     else 
-      flash[:error] = @recipe.errors.full_messages
+      # flash[:error] = @recipe.errors.full_messages
       redirect to '/recipes/new'
     end 
   end
@@ -43,7 +43,7 @@ class RecipeController < ApplicationController
     if @recipe 
       erb :'/recipes/edit'
     else 
-      flash[:error] = "Unable to find that recipe"
+      # flash[:error] = "Unable to find that recipe"
       redirect to '/recipes'
     end 
   end
@@ -51,10 +51,10 @@ class RecipeController < ApplicationController
   put '/recipes/:id' do 
     @recipe = Recipe.find_by_id(params[:id])
     if @recipe.update(name: params[:name], description: params[:description])
-      flash[:notice] = "#{@recipe.name} was successfully updated!"
+      # flash[:notice] = "#{@recipe.name} was successfully updated!"
       redirect to "/recipes/#{@recipe.id}"
     else 
-      flash[:error] = @recipe.errors.full_messages
+      # flash[:error] = @recipe.errors.full_messages
       redirect to "/recipes/#{@recipe.id}/edit"
     end
   end
@@ -63,9 +63,9 @@ class RecipeController < ApplicationController
     @recipe = Recipe.find_by_id(params[:id])
     if @recipe 
       @recipe.destroy 
-      flash[:notice] = "#{@recipe.name} was destroyed!"
+      # flash[:notice] = "#{@recipe.name} was destroyed!"
     else 
-      flash[:error] = "Unable to find that recipe"
+      # flash[:error] = "Unable to find that recipe"
     end
     redirect to "/recipes"
   end

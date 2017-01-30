@@ -1,4 +1,6 @@
+
 require_relative '../../config/environment'
+# require 'rack-flash'
 include ERB::Util
 #this is a module to help sanitize for XSS- extends the controller classes to "include" those sk
 
@@ -10,6 +12,8 @@ class ApplicationController < Sinatra::Base
     enable :sessions 
     set :session_secret, "zounds"
   end
+
+  # use Rack::Flash
 
 #I put the slash route in the application controller because it has no loyalties. One has to start here.
   
