@@ -1,119 +1,22 @@
-<style> 
-body{
-  background-color: #ffc16f;
-  color: white;
-  font-family: 'Audiowide', cursive;
-}
 
 
-  #subtitle {
-    margin-top: 40px;
-    text-align:center;
-    position:fixed;
-    font-size:18px;
-    letter-spacing:15px;
-    left:48px;
-    top:270px;
-    width:1164px;
-    height:60px;
-    color:white;
-    z-index: 6;
-  }
 
 
-  #try-box {
-    text-align:center;
-    position:fixed;
-    left:48px;
-    width:1164px;
-    height:318px;
-    font-size: 120px;
-    letter-spacing: 20px;
-    font-style: italic;
-    font-weight:bold;
-  } 
 
-  #plus-sign {
-    position:fixed;
-    left:786px;
-    top:458px;
-    width:282px;
-    height:188px;
-    transform:scale(2);
-    transform-origin:141px 94px;
-  }
-
-  #plus-sign:focus {
-    border-color: transparent;
-  }
-
-  .recipes a {
-    text-decoration: none;
-    color: #2fa2bd;
-    font-size: 17px;
-    letter-spacing: 6px;
-  }
-
-  .recipes {
-    width:620px;
-    height:40px;
-    font-size: 15px;
-    font-style:italic;
-    font-family: Audiowide;
-    letter-spacing: 8px;
-    font-weight: bold;
-  }
-
-  #recipes-container {
-    top: 357px;
-    left: 145px;
-    position: fixed;
-    overflow: scroll;
-    max-height: 230px;
-    width: 800px;
-  }
-  
-  #create-recipe {
-    position:fixed;
-    left:786px;
-    top:400px;
-    width:282px;
-    height:188px;
-    transform:scale(1.5);
-    transform-origin:141px 94px;
-
-  }
-
-  #create-text {
-    position:fixed;
-    left:690px;
-    top:600px;
-    width:350px;
-    height:36px;
-    font-size: 25px;
-    font-family: Audiowide;
-    letter-spacing: 3px;
-    color:#2fa2bd;
-    z-index: 8;
-
-  }
-
-</style>
-
-<div id="try-box">Federici Family Recipes</div>
-  <div id="subtitle"> recipes, stories, and other media</div>
-
-
-<!--these buttons will be a series of links attached to buttons that when pushed, will take you to the index page of a particular recipe-->
  
 
-  <div id="recipes-container"><% @recipes.each do |recipe| %>
-    <div class="recipes"><a href="/<%=recipe.pslug%>/index"><%= recipe.title %></a><br><br></div>
-    <% end %></div>
+  <div id="recipes-container"><%=current_user.username%>'s Recipes
+    <% @recipes.each do |recipe| %>
+    <% if recipe.user_id == current_user.id %>
+      <div class="recipes <%= 'my_recipes' if recipe.user.id == current_user.id %>"><a href="/recipes/<%=recipe.id%>"><%= recipe.title %></a><br><br></div>
+    <% end %><% end %></div>
+
+    <div id="recipes-container"> Everyone Else's Recipes<% @recipes.each do |recipe| %>
+    <% if recipe.user_id != current_user.id %>
+      <div class="recipes <%= 'my_recipes' if recipe.user.id == current_user.id %>"><a href="/recipes/<%=recipe.id%>"><%= recipe.title %></a><br><br></div>
+    <% end %><% end %></div>
     
-    <div id="create-text">create a new recipe</div>
+    <div id="create-recipe"><a href='/recipes/new'>create a new recipe</a></div>
 
-    <div id="create-recipe"><a href='/recipes/new'><img src="/images/plus.svg"></a></div>
- 
- 
+    
 

@@ -1,1 +1,476 @@
 @import url('https://fonts.googleapis.com/css?family=Audiowide');
+
+  #email {
+    position:fixed;
+    left:244px;
+    top:490px;
+    width:858px;
+    height:34px;
+    font-size: 16px;
+    line-height: 1.3;
+    font-style:italic;
+    border-bottom:2px solid white;
+    background-color: #ffa834;
+    color:white;
+    font-family: Audiowide;
+    border-style:none none solid none;
+  }
+
+
+  #email::-webkit-input-placeholder{
+    color:white;
+  }
+
+  #email::-moz-placeholder {
+    color:white;
+  }
+
+  #email:-moz-placeholder {
+    color:white;
+  }
+  #email:-ms-input-placeholder {
+    color: white;
+  }
+
+  #name_login {
+    position:fixed;
+    left:244px;
+    top:445px;
+    width:858px;
+    height:34px;
+    font-size: 16px;
+    line-height: 1.3;
+    font-style:italic;
+    border-bottom:2px solid white;
+    background-color: #ffa834;
+    color:white;
+    font-family: Audiowide;
+    border-style:none none solid none;
+  }
+  
+  #name_login::-webkit-input-placeholder{
+    color:white;
+  }
+
+  #name_login::-moz-placeholder {
+    color:white;
+  }
+
+  #name_login:-moz-placeholder {
+    color:white;
+  }
+  #name_login:-ms-input-placeholder {
+    color: white;
+  }
+
+  #password {
+    position:fixed;
+    left:244px;
+    top:490px;
+    width:858px;
+    height:34px;
+    font-size: 16px;
+    line-height: 1.3;
+    font-style:italic;
+    border-bottom:2px solid white;
+    background-color: #ffa834;
+    color:white;
+    font-family: Audiowide;
+    border-style:none none solid none;
+  }
+  #password::-webkit-input-placeholder{
+    color:white;
+  }
+
+  #password::-moz-placeholder {
+    color:white;
+  }
+
+  #password:-moz-placeholder {
+    color:white;
+  }
+  #password:-ms-input-placeholder {
+    color: white;
+  }
+
+  #sign-up {
+    position:fixed;
+    left:980px;
+    top:583px;
+    width:378px;
+    height:63px;
+    font-size: 20px;
+    letter-spacing: 10px;
+    z-index:6;
+    font-family: Audiowide;
+    border-style:none none none none;
+    }
+
+  #sign-up a{
+    text-decoration: none;
+    color:white;
+  }
+
+
+#subtitle {
+    margin-top: 40px;
+    text-align:center;
+    position:fixed;
+    font-size:18px;
+    letter-spacing:15px;
+    left:48px;
+    top:270px;
+    width:1164px;
+    height:116px;
+    color:#f91212;
+    z-index: 6;
+  }
+
+
+#sign-up {
+    font-size:20px;
+    letter-spacing:10px;
+    left:300px;
+    top:719px;
+    width:330px;
+    height:55px;
+  }
+    #copyright {
+      font-family: Audiowide;
+      color: #f1056e;
+      position:fixed;
+      left:23px;
+      top:612px;
+      width:402px;
+      height:29px;
+      font-size: 12px;
+      letter-spacing:3px;
+      z-index:20;
+      
+    }
+    #back-to-recipe-index {
+      font-family: Audiowide;
+      color: #f1056e;
+      position:fixed;
+      left:43px;
+      top:312px;
+      width:402px;
+      height:29px;
+      font-size: 12px;
+      letter-spacing:3px;
+      z-index:20;
+
+
+    }
+
+
+    #log-out {
+    font-family: Audiowide;
+    color: #f1056e;
+    position: fixed;
+    left: 42px;
+    top: 149px;
+    width: 392px;
+    height: 29px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-style: italic;
+    z-index: 20;
+    }
+
+    #log-out a{
+      color:#f1056e;
+      text-decoration:none;
+      top:29px;
+      left:28px;
+    }
+
+body{
+    background-color: rgba(250, 229, 210, 0.59);
+    color: rgba(255, 129, 34, 0.95);
+    font-family: 'Roboto', cursive;
+    font-weight: 709;
+    font-size: 600%;
+    font-style: italic;
+    font-stretch: ultra-expanded;
+    letter-spacing: 10px;
+  }
+
+   a {
+    text-decoration: none;
+    } 
+    a:link {
+      color: #ff5555;
+      transition: initial;
+    }
+    a:visited {
+      color: #f1056e;
+      transition: initial;
+    }
+    a:hover {
+    color: #607fbb;
+    transition: initial;
+    }
+
+
+
+#name {
+  position: fixed;
+  left: -17px;
+  font-size: 20px;
+  transform: rotate(-90deg);
+  top: 468px;
+  letter-spacing: 6px;
+  font-style: italic;
+}
+   
+
+  #name a{
+    text-decoration: none;
+    color:white;
+  }
+      
+  #directions {  
+    font-family: "Courier New", Courier, monospace;
+    font-size: 14px;
+    color: #d45454;
+    left: 120px;
+    top: 115px;
+    min-height: 269px;
+    overflow: scroll;
+    position: fixed;
+    right: 743px;
+    max-height: 275px;
+  }
+  
+ #create-recipe {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  color: #d45454;
+  left: 120px;
+  top: 215px;
+  min-height: 269px;
+  overflow: scroll;
+  position: fixed;
+  right: 743px;
+  max-height: 275px;
+  letter-spacing: 2px;
+
+ }
+
+#video_link {
+       position: fixed;
+    top: 453px;
+    height: 48px;
+    width: 51px;
+    left: 339px;
+    z-index: 13;
+    font-size: 12px;
+    letter-spacing: 5px;
+    left: 57px;
+    top: 547px;
+  }
+
+  
+    
+ #title {
+    font-size: 36px;
+    letter-spacing: 2px;
+    top: 138px;
+    left: 552px;
+    height: 49%;
+    z-index: 18;
+    font-style: italic;
+    color: #35a5d4;
+    position: fixed;
+    max-height: 111px;
+    max-width: 362px;
+  }
+
+   #side-edit{
+    font-size: 45px;
+    letter-spacing: 17px;
+    top: 119px;
+    left: 1120px;
+    height: 110px;
+    transform: rotate(-90deg);
+    z-index: 4;
+    font-style: italic;
+    position: fixed;
+  }
+
+    #try-box {
+    top: 20px;
+    left: 40px;
+    position: fixed;
+    }
+   
+  #directions {
+    position: fixed;
+    left: 555px;
+    font-size: 13px;
+    top: 133px;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: black;
+    font-family: "Courier New";
+    overflow: scroll;
+    max-width: 605px;
+    min-height: 165px;
+  }
+
+
+
+#story {
+    position: fixed;
+    left: 97px;
+    font-size: 13px;
+    top: 199px;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: black;
+    font-family: "Courier New";
+    overflow: scroll;
+    max-width: 605px;
+    min-height: 165px;
+    overflow: scroll;
+  }
+
+  #ingredients {
+    position: fixed;
+    left: 555px;
+    font-size: 13px;
+    top: 200px;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: black;
+    font-family: "Courier New";
+    overflow: scroll;
+    max-width: 605px;
+    min-height: 165px;
+  }
+   
+
+   #servings {
+    position: fixed;
+    left: 991px;
+    font-size: 22px;
+    top: 152px;
+    letter-spacing: 1px;
+    font-style: italic;
+  }
+  
+  #recipes-container {
+    position: fixed;
+    left: 391px;
+    font-size: 22px;
+    top: 252px;
+    letter-spacing: 1px;
+    font-style: italic;
+    color:black;
+
+  }
+  
+  .recipes {
+   
+    left: 391px;
+    font-size: 22px;
+   
+    letter-spacing: 1px;
+    font-style: italic;
+    
+
+  }
+  
+  .my_recipes {
+    color:red;
+
+  }
+   
+   #delete {
+    position: fixed;
+    left: 1124px;
+    font-size: 22px;
+    top: 411px;
+   }
+
+#nutrition {
+  position: fixed;
+  left: 1124px;
+  font-size: 22px;
+  top: 511px;
+
+
+}
+
+
+
+  
+
+
+  #password_new {
+    position:fixed;
+    left:244px;
+    top:535px;
+    width:858px;
+    height:34px;
+    font-size: 16px;
+    line-height: 1.3;
+    font-style:italic;
+    border-bottom:2px solid white;
+    background-color: #ffa834;
+    color:white;
+    font-family: Audiowide;
+    border-style:none none solid none;
+  }
+  
+  #password_new::-webkit-input-placeholder{
+    color:white;
+  }
+  
+  #password_new::-moz-placeholder {
+    color:white;
+  }
+
+  #password_new:-moz-placeholder {
+    color:white;
+  }
+  #password_new:-ms-input-placeholder {
+    color: white;
+  }
+  
+  #please-sign-up {
+    position:fixed;
+    left:360px;
+    top:580px;
+    width:680px;
+    height:90px;
+    font-size: 15px;
+    font-style:italic;
+    letter-spacing: 8px;
+    background-color: rgba(255, 168, 52, 0.02);
+    color:#ff3823;
+    font-family: Audiowide;
+    border-style:none none solid none;
+    z-index: 7;
+  }
+
+  #duplicate-name-error {
+    position:fixed;
+    left:240px;
+    top:400px;
+    width:680px;
+    height:20px;
+    font-size: 12px;
+    font-style:italic;
+    letter-spacing: 3px;
+    background-color: rgba(255, 168, 52, 0.02);
+    color:#ff3823;
+    font-family: Audiowide;
+    z-index: 4;
+  }
+
+
+  
+

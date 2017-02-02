@@ -1,63 +1,30 @@
 <!doctype html>
 <html>
   <head>
-    <title>Hypermedia Wonderland</title>
+    <title>Federici Recipes</title>
     
    <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
   </head>
   <body>
-   <style>
-    #copyright {
-      font-family: Audiowide;
-      color: #f1056e;
-      position:fixed;
-      left:23px;
-      top:612px;
-      width:402px;
-      height:29px;
-      font-size: 12px;
-      letter-spacing:3px;
-      z-index:20;
-      
-    }
-
-    #log-out {
-      font-family: Audiowide;
-      color:#f1056e;
-      position:fixed;
-      left:27px;
-      top:12px;
-      width:392px;
-      height:29px;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing:3px;
-      font-style: italic;
-      z-index: 20;
-    }
-
-    #log-out a{
-      color:#f1056e;
-      text-decoration:none;
-      top:29px;
-      left:28px;
-    }
   
   
-  </style>
-    <div class="container" >
+  
+ 
+    
      <nav>
       <% if logged_in? %>
         <div id="log-out"><a href="/logout"> log-out, </a>
         <%= current_user.username %></div>
       <%end %>
     </nav>
-     <div id="try-box">hypermedia wonderland</div>
+    
+     <div id="try-box">Federici Recipes</div>
       
       <%= yield %> 
        
-      </div>
+     
     
     <!-- this is the copyright -->
     <div id="copyright"> &copy; Nicole Federici 2016</div>

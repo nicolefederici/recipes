@@ -18,7 +18,11 @@ class ApplicationController < Sinatra::Base
 #I put the slash route in the application controller because it has no loyalties. One has to start here.
   
   get '/' do
-    erb :'recipes/index'
+    if logged_in?
+      redirect to '/recipes'
+    else
+      redirect to '/login'
+    end
   end
 
    helpers do
