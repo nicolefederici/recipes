@@ -531,11 +531,41 @@ body{
 }
 
 
- 
+ #ingredients {
+      position: fixed;
+    left: 415px;
+    font-size: 13px;
+    top: 177px;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: #03A9F4;
+    overflow: scroll;
+    width: 385px;
+    min-height: 165px;
+    border-color: #03A9F4;
+    border-radius: 10px;
+   
+}
+
+#ingredients::-webkit-input-placeholder {
+    color: #03A9F4;
+  }
+
+  #ingredients::-moz-placeholder {
+    color: #03A9F4;
+  }
+
+  #ingredients:-moz-placeholder {
+    color: #03A9F4;
+  }
+  #ingredients:-ms-input-placeholder {
+    color: #03A9F4;
+  }
+
 
 
   #eingredients {
-      position: fixed;
+    position: fixed;
     left: 415px;
     font-size: 13px;
     top: 177px;
