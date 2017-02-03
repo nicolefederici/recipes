@@ -81,6 +81,7 @@ class RecipeController < ApplicationController
       end
     else 
       redirect to '/login'
+    end
   end
 
   delete '/recipes/:id' do
@@ -90,7 +91,7 @@ class RecipeController < ApplicationController
         if @recipe 
           @recipe.destroy 
           # flash[:notice] = "#{@recipe.name} was destroyed!"
-        else 
+        # else 
           # flash[:error] = "Unable to find that recipe"
         end
         redirect to "/recipes"
@@ -107,7 +108,7 @@ class RecipeController < ApplicationController
   
 
 end
-end
+
 
 
 #A non logged in user can see all recipes and look at an individual recipe 

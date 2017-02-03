@@ -1,25 +1,35 @@
+<style>
+body {
+  background-color: white;
+}
 
+#try-box {
+  display: none;
+}
+
+</style>
 
 <div id="back-to-recipe-index"><a href="/recipes">federicindice</a></div>
  
  <form method="post" action="/recipes/<%= @recipe.id %>">
   <input id="hidden" type="hidden" name="_method" value="PUT">
   
-  <div id="title"><input type="text" name="title" value="<%= @recipe.title %>"></div>
-  <div class="servings"><input type="text" name="servings" value="<%= @recipe.servings %>"></div>
-  <div class="nutrition"><input type="text" name="nutrition" value="<%= @recipe.nutrition %>"></div>
+  <input id="title" type="text" name="title" value="<%= @recipe.title %>"></div>
+  <input id="servings" type="text" name="servings" value="<%= @recipe.servings %>">
+  <input id="nutrition" type="text" name="nutrition" value="<%= @recipe.nutrition %>">
 
 
 
 
-  <div id="ingredients"><textarea type="text" name="ingredients"><%= @recipe.ingredients %></textarea></div>
-  <div id="directions"><textarea type="text" name="directions"><%= @recipe.directions %></textarea></div>
-  <div id="story"><textarea type="text" name="story"><%= @recipe.story %></textarea></div>
+  <textarea id="ingredients" type="text" name="ingredients"><%= @recipe.ingredients %></textarea>
+  <textarea id="directions"type="text" name="directions"><%= @recipe.directions %></textarea>
+  <textarea id="story" type="text" name="story"><%= @recipe.story %></textarea>
 
   
-  <div id="video_link"><input type="url" name="video_link" value="<%= @recipe.video_link %>"></div>
+  <input id="video_link" type="url" name="video_link" value="<%= @recipe.video_link %>">
   
-  <input type="submit" value="edit">
+  
+  <input id="add_recipe_button" type="submit" value="edit recipe">
 </form>
 
 

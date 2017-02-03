@@ -415,7 +415,7 @@ body{
     left: 520px;
     top: 261px;
     /* min-height: 269px; */
-    overflow: scroll;
+    overflow: auto;
     position: fixed;
     /* right: 743px; */
     /* max-height: 275px; */
@@ -434,6 +434,8 @@ body{
     /* color: cornflowerblue; */
     border-color: #03A9F4;
     border-radius: 10px;
+    border-width: thin;
+    border-style: solid;
 }
 
 
@@ -453,16 +455,21 @@ body{
   }
 
 
+ #enutrition_wrapper {
+  position:fixed;
+left: 416px;
+top: 377px;
+ }
   #enutrition {
-    position: fixed;
-    left: 416px;
+    position: absolute;
     font-size: 13px;
-    top: 377px;
     height: 200px;
     font-family: 'Roboto',monospace;
     font-style: italic;
     letter-spacing: 1px;
-    
+    overflow: auto;
+    border-color: transparent;
+    color: #03a9f4;
 }
 
 
@@ -480,7 +487,7 @@ body{
     font-family: 'roboto', monospace;
     width: 340px;
     height: 425px;
-    overflow: scroll;
+    overflow: auto;
     z-index: auto;
     line-height: normal;
     font-size: 13px;
@@ -508,27 +515,36 @@ body{
 
 
 
-
-
-  #edirections {  
-    position: fixed;
+#edirections_wrapper {
+position: fixed;
     left: 847px;
     font-size: 13px;
-    top: 177px;
+    top: 109px;
+    background-color: transparent;
+
+}
+
+  #edirections {  
+    position: absolute;
+      position: absolute;
+    /* left: 847px; */
+    font-size: 13px;
+    /* top: 109px; */
     letter-spacing: 1px;
     font-style: italic;
     color: #03A9F4;
     font-family: 'roboto', monospace;
     width: 340px;
     height: 425px;
-    overflow: scroll;
+    overflow: auto;
     z-index: auto;
     line-height: normal;
     font-size: 13px;
     transition: none;
     background: transparent !important;
-    
 }
+    
+
 
 
  #ingredients {
@@ -539,7 +555,7 @@ body{
     letter-spacing: 1px;
     font-style: italic;
     color: #03A9F4;
-    overflow: scroll;
+    overflow: auto;
     width: 385px;
     min-height: 165px;
     border-color: #03A9F4;
@@ -563,16 +579,22 @@ body{
   }
 
 
+#eingredients_wrapper {
+position: fixed;
+left: 415px;
+ top: 177px;
+
+}
 
   #eingredients {
-    position: fixed;
-    left: 415px;
+    position: absolute;
+    
     font-size: 13px;
-    top: 177px;
+   
     letter-spacing: 1px;
     font-style: italic;
     color: #03A9F4;
-    overflow: scroll;
+    overflow: auto;
     width: 385px;
     min-height: 165px;
    
@@ -587,9 +609,9 @@ body{
     letter-spacing: 1px;
     font-style: italic;
     color: black;
-    overflow: scroll;
+    overflow: auto;
     min-height: 165px;
-    overflow: scroll;
+    overflow: auto;
     width: 282px;
     height: 282px;
     border-color: #03A9F4;
@@ -613,19 +635,23 @@ body{
   }
 
 
-
+#estory_wrapper {
+position: fixed;
+left: 68px;
+top: 179px;
+}
 
  #estory {
-         position: fixed;
-    left: 68px;
+    position: absolute;
+    
     font-size: 13px;
-    top: 179px;
+    
     letter-spacing: 1px;
     font-style: italic;
     color: #03A9F4;
-    overflow: scroll;
+    overflow: auto;
     min-height: 165px;
-    overflow: scroll;
+    overflow: auto;
     width: 282px;
     height: 282px;
   
@@ -698,17 +724,29 @@ body{
 
   
    #side-edit{
+   
     font-size: 45px;
     letter-spacing: 17px;
     top: 119px;
-    left: 1120px;
+    left: 1173px;
     height: 110px;
     transform: rotate(-90deg);
     z-index: 4;
     font-style: italic;
     position: fixed;
     border-color: transparent;
-  }
+    color: #03a9f4;
+}
+
+#side-edit a:link {
+  color: #bac;
+
+}
+
+#side-edit a {
+  color: #bac;
+
+}
 
   #servings {
     position: fixed;

@@ -14,25 +14,32 @@ body {
 
 <div id="name"><%= @recipe.user.username %></div>
 <!--  TITLE -->
-
+ <div id="enutrition_wrapper"><div id="enutrition" type="text" name="nutrition"><%= @recipe.nutrition %></div></div>
 <!--TEXT
  -->  
-<div id="edirections"><%= h(@recipe.directions).gsub(/\n/, '<br/>') %></div><br>
+<div id="edirections_wrapper">
+  <div id="edirections"><%= h(@recipe.directions).gsub(/\n/, '<br/>') %></div>
+</div>
    
 
 <div id="etitle"><%= @recipe.title %></div>
 
 <div id="eservings"> servings <%= @recipe.servings%></div>
 
-<div id="eingredients"><%= @recipe.ingredients %></div><br>
-<div id="edirections"><%= @recipe.directions %></div><br>
-<div id="estory"><%= @recipe.story %></div><br>
-<div id="evideo_link"><%= @recipe.video_link %></div><br>
+<div id="eingredients_wrapper">
+  <div id="eingredients"><%= @recipe.ingredients %></div>
+</div>
+<!-- <div id="edirections"><%= @recipe.directions %></div><br>
+ -->
+
+ <div id="estory_wrapper"><div id="estory"><%= @recipe.story %></div><br>
+<div id="evideo_link"><%= @recipe.video_link %></div></div>
 
 <%if @recipe.user_id == current_user.id%>
   <div id="side-edit"><a href='/recipes/<%=@recipe.id%>/edit'>EDIT</a></div>
-<%end%>
-<div id="delete">
+
+
+  <div id="delete">
   
   <form method="post" action="/recipes/<%= @recipe.id %>">
 
@@ -42,6 +49,7 @@ body {
   </form>
         
   </div> 
+  <%end%>
 
 
 
