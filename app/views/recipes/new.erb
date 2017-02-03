@@ -1,20 +1,31 @@
+<style>
+#try-box {
+  display:none;
+}
 
+body {
+  background-color: white;
 
+}
+
+</style>
+
+<div id="back-to-recipe-index"><a href="/recipes">federicindice</a></div>
 <form method="post" action="/recipes">
-  <div id="title"><input type="text" name="title" placeholder="title"></div>
+  <input id="title" type="text" name="title" placeholder="title">
   <textarea id="ingredients" type="text" name="ingredients" placeholder="ingredients"></textarea><br>
   <textarea id="directions" type="text" name="directions" placeholder="directions"></textarea><br>
   <input id="servings" type="number" name="servings" placeholder="servings"></input><br>
   <textarea id="nutrition" type="text" name="nutrition" placeholder="nutrition"></textarea><br>
   <textarea id="story" type="text" name="story" placeholder="story"></textarea><br>
   
-  <div id="video_link"><input type="url" name="video_link" placeholder="video link"></div><br>
+  <input id="video_link" type="url" name="video_link" placeholder="video link">
   
   
   
 
   
-  <input type="submit" id="submit" value="add recipe">
+  <input id="add_recipe_button" type="submit" value="add recipe">
 </form>
 
 

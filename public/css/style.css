@@ -1,96 +1,269 @@
 @import url('https://fonts.googleapis.com/css?family=Audiowide');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Hairline|Warnes');
+  
+#name {
+      position: fixed;
+    left: 320px;
+    font-size: 20px;
+    top: 90px;
+    letter-spacing: 6px;
+    font-style: italic;
+    color: #03A9F4;
+}
 
-  #email {
-    position:fixed;
-    left:244px;
-    top:490px;
-    width:858px;
-    height:34px;
-    font-size: 16px;
-    line-height: 1.3;
-    font-style:italic;
-    border-bottom:2px solid white;
-    background-color: #ffa834;
-    color:white;
-    font-family: Audiowide;
-    border-style:none none solid none;
+   
+
+  #name a{
+    text-decoration: none;
+    color:#03A9F4;
   }
 
 
-  #email::-webkit-input-placeholder{
-    color:white;
+#copyright {
+          font-family: 'Warnes', cursive;
+    color: #d8bdf3;
+    position: fixed;
+    left: 72px;
+    top: 580px;
+    width: 402px;
+    height: 29px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    z-index: 20;
+}
+
+#try-box {
+    font-family: 'Warnes', cursive;
+    top: 132px;
+    left: 274px;
+    position: fixed;
+    color:#ffffff;
+}
+
+
+
+
+
+
+    
+   
+#subtitle {
+    margin-top: 40px;
+    text-align: center;
+    position: fixed;
+    font-size: 18px;
+    letter-spacing: 12px;
+    left: 48px;
+    top: 270px;
+    width: 1164px;
+    height: 116px;
+    color: #ffffff;
+    z-index: 6;
   }
 
-  #email::-moz-placeholder {
-    color:white;
-  }
-
-  #email:-moz-placeholder {
-    color:white;
-  }
-  #email:-ms-input-placeholder {
+  #button {
     color: white;
+    background-color: transparent;
+    border-color: transparent;
+    font-family: 'Warnes', cursive;
+    font-size: 15px;
+    left: 235px;
+    position: fixed;
+    top: 544px;
+    font-style: italic;
   }
+
+  #signup_button {
+    color: white;
+    background-color: transparent;
+    border-color: transparent;
+    font-family: 'Warnes', cursive;
+    font-size: 15px;
+    left: 235px;
+    position: fixed;
+    top: 550px;
+    font-style: italic;
+}
+
+#delete_button {
+     color: #03A9F4;
+    background-color: transparent;
+    border-color: transparent;
+    font-family: 'Warnes', cursive;
+    font-size: 32px;
+    left: 935px;
+    position: fixed;
+    top: 544px;
+    font-style: italic;
+}
+
+ #add_recipe_button {
+      color: #03A9F4;
+    background-color: transparent;
+    border-color: transparent;
+    font-family: 'Warnes', cursive;
+    font-size: 29px;
+    left: 577px;
+    position: fixed;
+    top: 440px;
+    font-style: italic;
+}
 
   #name_login {
-    position:fixed;
-    left:244px;
-    top:445px;
-    width:858px;
-    height:34px;
+    position: fixed;
+    left: 244px;
+    top: 445px;
+    width: 858px;
+    height: 34px;
     font-size: 16px;
     line-height: 1.3;
-    font-style:italic;
-    border-bottom:2px solid white;
-    background-color: #ffa834;
-    color:white;
-    font-family: Audiowide;
-    border-style:none none solid none;
+    font-style: italic;
+    border-bottom: 2px #ffffff;
+    background-color: rgba(255, 168, 52, 0);
+  
+    font-family: 'Warnes', cursive;
+    border-style: none none solid; 
   }
   
   #name_login::-webkit-input-placeholder{
-    color:white;
+    color:#ffffff;
   }
 
   #name_login::-moz-placeholder {
-    color:white;
+    color:#ffffff;
   }
 
   #name_login:-moz-placeholder {
-    color:white;
+    color:#ffffff;
   }
   #name_login:-ms-input-placeholder {
-    color: white;
+    color: #ffffff;
   }
 
-  #password {
+  #name_signup {
+    position: fixed;
+    left: 244px;
+    top: 407px;
+    width: 858px;
+    height: 34px;
+    font-size: 16px;
+    line-height: 1.3;
+    font-style: italic;
+    border-bottom: 2px #ffffff;
+    background-color: rgba(255, 168, 52, 0);
+  
+    font-family: 'Warnes', cursive;
+    border-style: none none solid; 
+  }
+  
+  #name_signup::-webkit-input-placeholder{
+    color:#ffffff;
+  }
+
+  #name_signup::-moz-placeholder {
+    color:#ffffff;
+  }
+
+  #name_signup:-moz-placeholder {
+    color:#ffffff;
+  }
+  #name_signup:-ms-input-placeholder {
+    color: #ffffff;
+  }
+
+#email {
     position:fixed;
     left:244px;
-    top:490px;
+    top:454px;
     width:858px;
     height:34px;
     font-size: 16px;
     line-height: 1.3;
     font-style:italic;
-    border-bottom:2px solid white;
-    background-color: #ffa834;
-    color:white;
-    font-family: Audiowide;
+    border-bottom:2px #ffffff;
+    background-color: transparent;
+    color:#ffffff;
+    font-family: 'Warnes', cursive;
     border-style:none none solid none;
   }
+
+
+  #email::-webkit-input-placeholder {
+    color:#ffffff;
+  }
+
+  #email::-moz-placeholder {
+    color:#ffffff;
+  }
+
+  #email:-moz-placeholder {
+    color:#ffffff;
+  }
+  #email:-ms-input-placeholder {
+    color: #ffffff;
+  }
+
+  
+  #password {
+    position: fixed;
+    left: 244px;
+    top: 490px;
+    width: 858px;
+    height: 34px;
+    font-size: 16px;
+    line-height: 1.3;
+    font-style: italic;
+    border-bottom: 2px #ffffff;
+    background-color: rgba(255, 168, 52, 0);
+    color: #ffffff;
+    font-family: 'Warnes', cursive;
+    border-style: none none solid none;
+  }
+
   #password::-webkit-input-placeholder{
-    color:white;
+    color:#ffffff;
   }
 
   #password::-moz-placeholder {
-    color:white;
+    color:#ffffff;
   }
 
   #password:-moz-placeholder {
-    color:white;
+    color:#ffffff;
   }
   #password:-ms-input-placeholder {
-    color: white;
+    color: #ffffff;
+  }
+
+  #password_new {
+    position:fixed;
+    left:244px;
+    top:501px;
+    width:858px;
+    height:34px;
+    font-size: 16px;
+    line-height: 1.3;
+    font-style:italic;
+    border-bottom:2px #ffffff;
+    background-color: transparent;
+    color:#ffffff;
+    font-family: 'Warnes', cursive;
+    border-style:none none solid none;
+  }
+  
+  #password_new::-webkit-input-placeholder{
+    color:#ffffff;
+  }
+  
+  #password_new::-moz-placeholder {
+    color:#ffffff;
+  }
+
+  #password_new:-moz-placeholder {
+    color:#ffffff;
+  }
+  #password_new:-ms-input-placeholder {
+    color: #ffffff;
   }
 
   #sign-up {
@@ -100,76 +273,46 @@
     width:378px;
     height:63px;
     font-size: 20px;
-    letter-spacing: 10px;
+    letter-spacing: 4px;
     z-index:6;
-    font-family: Audiowide;
+    font-family: 'Warnes', cursive;
     border-style:none none none none;
     }
 
   #sign-up a{
     text-decoration: none;
-    color:white;
+    color:#ffffff;
   }
-
-
-#subtitle {
-    margin-top: 40px;
-    text-align:center;
-    position:fixed;
-    font-size:18px;
-    letter-spacing:15px;
-    left:48px;
-    top:270px;
-    width:1164px;
-    height:116px;
-    color:#f91212;
-    z-index: 6;
-  }
-
-
-#sign-up {
+  
+ /* #sign-up {
     font-size:20px;
     letter-spacing:10px;
     left:300px;
     top:719px;
     width:330px;
     height:55px;
-  }
-    #copyright {
-      font-family: Audiowide;
-      color: #f1056e;
-      position:fixed;
-      left:23px;
-      top:612px;
-      width:402px;
-      height:29px;
-      font-size: 12px;
-      letter-spacing:3px;
-      z-index:20;
-      
-    }
-    #back-to-recipe-index {
-      font-family: Audiowide;
-      color: #f1056e;
-      position:fixed;
-      left:43px;
-      top:312px;
-      width:402px;
-      height:29px;
-      font-size: 12px;
-      letter-spacing:3px;
-      z-index:20;
+  }*/
 
-
-    }
+ #back-to-recipe-index   {  
+    font-family: 'Warnes', cursive;
+    color: #ffffff;
+    position: fixed;
+    left: 43px;
+    top: 87px;
+    width: 402px;
+    height: 29px;
+    font-size: 22px;
+    letter-spacing: 3px;
+    z-index: 20;
+}
 
 
     #log-out {
-    font-family: Audiowide;
-    color: #f1056e;
+    font-family: 'Warnes', cursive;
+    color: #a4d6ec;
     position: fixed;
     left: 42px;
-    top: 149px;
+    top: 36px;
     width: 392px;
     height: 29px;
     font-size: 13px;
@@ -180,15 +323,15 @@
     }
 
     #log-out a{
-      color:#f1056e;
+      color:#a4d6ec;
       text-decoration:none;
       top:29px;
       left:28px;
     }
 
 body{
-    background-color: rgba(250, 229, 210, 0.59);
-    color: rgba(255, 129, 34, 0.95);
+    background-color: #e91e63;
+    color: ffffff;
     font-family: 'Roboto', cursive;
     font-weight: 709;
     font-size: 600%;
@@ -201,93 +344,329 @@ body{
     text-decoration: none;
     } 
     a:link {
-      color: #ff5555;
+      color: white;
       transition: initial;
     }
     a:visited {
-      color: #f1056e;
+      color: #a4d6ec;
       transition: initial;
     }
     a:hover {
-    color: #607fbb;
+    color: #fbf5c4;
     transition: initial;
     }
 
 
-
-#name {
-  position: fixed;
-  left: -17px;
-  font-size: 20px;
-  transform: rotate(-90deg);
-  top: 468px;
-  letter-spacing: 6px;
-  font-style: italic;
+  #title      {
+       font-size: 36px;
+    letter-spacing: 2px;
+    top: 39px;
+    left: 314px;
+    /* height: 49%; */
+    z-index: 18;
+    font-style: italic;
+    color: #03A9F4;
+    position: fixed;
+    max-height: 111px;
+    border-radius: transparent;
+    border-style: solid;
+    border-radius: 10px;
+    font-family: 'Warnes',cursive;
+    border-width: thin;
 }
-   
 
-  #name a{
-    text-decoration: none;
-    color:white;
+ #title::-webkit-input-placeholder {
+    color: #03A9F4;
   }
-      
-  #directions {  
-    font-family: "Courier New", Courier, monospace;
-    font-size: 14px;
-    color: #d45454;
-    left: 120px;
-    top: 115px;
-    min-height: 269px;
+
+  #title::-moz-placeholder {
+    color: #03A9F4;
+  }
+
+  #title:-moz-placeholder {
+    color: #03A9F4;
+  }
+  #title:-ms-input-placeholder {
+    color: #03A9F4;
+  }
+
+
+  #etitle      {
+    font-size: 36px;
+    letter-spacing: 2px;
+    top: 39px;
+    left: 314px;
+    /* height: 49%; */
+    z-index: 18;
+    font-style: italic;
+    color: #03A9F4;
+    position: fixed;
+    max-height: 111px;
+    font-family: 'Warnes',cursive;
+    
+}
+
+
+  #create-recipe {
+ 
+    font-family: 'Warnes', cursive;
+    font-size: 19px;
+    color: white;
+    left: 520px;
+    top: 261px;
+    /* min-height: 269px; */
     overflow: scroll;
     position: fixed;
-    right: 743px;
-    max-height: 275px;
-  }
-  
- #create-recipe {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 14px;
-  color: #d45454;
-  left: 120px;
-  top: 215px;
-  min-height: 269px;
-  overflow: scroll;
-  position: fixed;
-  right: 743px;
-  max-height: 275px;
-  letter-spacing: 2px;
+    /* right: 743px; */
+    /* max-height: 275px; */
+    letter-spacing: 2px;
+}
 
- }
+  #nutrition {
+    position: fixed;
+    left: 416px;
+    font-size: 13px;
+    top: 377px;
+    height: 200px;
+    font-family: 'Roboto',monospace;
+    font-style: italic;
+    letter-spacing: 1px;
+    /* color: cornflowerblue; */
+    border-color: #03A9F4;
+    border-radius: 10px;
+}
+
+
+ #nutrition::-webkit-input-placeholder {
+    color: #03A9F4;
+  }
+
+  #nutrition::-moz-placeholder {
+    color: #03A9F4;
+  }
+
+  #nutrition:-moz-placeholder {
+    color: #03A9F4;
+  }
+  #nutrition:-ms-input-placeholder {
+    color: #03A9F4;
+  }
+
+
+  #enutrition {
+    position: fixed;
+    left: 416px;
+    font-size: 13px;
+    top: 377px;
+    height: 200px;
+    font-family: 'Roboto',monospace;
+    font-style: italic;
+    letter-spacing: 1px;
+    
+}
+
+
+ 
+
+
+  #directions {  
+       position: fixed;
+    left: 847px;
+    font-size: 13px;
+    top: 177px;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: black;
+    font-family: 'roboto', monospace;
+    width: 340px;
+    height: 425px;
+    overflow: scroll;
+    z-index: auto;
+    line-height: normal;
+    font-size: 13px;
+    transition: none;
+    background: transparent !important;
+    border-color: #03A9F4;
+    border-radius: 10px;
+}
+
+
+ #directions::-webkit-input-placeholder {
+    color: #03A9F4;
+  }
+
+  #directions::-moz-placeholder {
+    color: #03A9F4;
+  }
+
+  #directions:-moz-placeholder {
+    color: #03A9F4;
+  }
+  #directions:-ms-input-placeholder {
+    color: #03A9F4;
+  }
+
+
+
+
+
+  #edirections {  
+    position: fixed;
+    left: 847px;
+    font-size: 13px;
+    top: 177px;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: #03A9F4;
+    font-family: 'roboto', monospace;
+    width: 340px;
+    height: 425px;
+    overflow: scroll;
+    z-index: auto;
+    line-height: normal;
+    font-size: 13px;
+    transition: none;
+    background: transparent !important;
+    
+}
+
+
+ 
+
+
+  #eingredients {
+      position: fixed;
+    left: 415px;
+    font-size: 13px;
+    top: 177px;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: #03A9F4;
+    overflow: scroll;
+    width: 385px;
+    min-height: 165px;
+   
+}
+
+  
+   #story {
+         position: fixed;
+    left: 68px;
+    font-size: 13px;
+    top: 179px;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: black;
+    overflow: scroll;
+    min-height: 165px;
+    overflow: scroll;
+    width: 282px;
+    height: 282px;
+    border-color: #03A9F4;
+    border-radius: 10px;
+}
+
+
+ #story::-webkit-input-placeholder {
+    color: #03A9F4;
+  }
+
+  #story::-moz-placeholder {
+    color: #03A9F4;
+  }
+
+  #story:-moz-placeholder {
+    color: #03A9F4;
+  }
+  #story:-ms-input-placeholder {
+    color: #03A9F4;
+  }
+
+
+
+
+ #estory {
+         position: fixed;
+    left: 68px;
+    font-size: 13px;
+    top: 179px;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: #03A9F4;
+    overflow: scroll;
+    min-height: 165px;
+    overflow: scroll;
+    width: 282px;
+    height: 282px;
+  
+}
+
+
+
+
 
 #video_link {
+   
        position: fixed;
     top: 453px;
-    height: 48px;
-    width: 51px;
+    height: 28px;
+    width: 299px;
     left: 339px;
     z-index: 13;
     font-size: 12px;
-    letter-spacing: 5px;
-    left: 57px;
-    top: 547px;
+    letter-spacing: 2px;
+    left: 67px;
+    top: 495px;
+    font-style: italic;
+    border-color: #03A9F4;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: thin;
+}
+
+
+ #video_link::-webkit-input-placeholder {
+    color: #03A9F4;
   }
+
+  #video_link::-moz-placeholder {
+    color: #03A9F4;
+  }
+
+  #video_link:-moz-placeholder {
+    color: #03A9F4;
+  }
+  #video_link:-ms-input-placeholder {
+    color: #03A9F4;
+  }
+    
+
+
+
+
+#evideo_link {
+   
+    position: fixed;
+    top: 453px;
+    height: 28px;
+    width: 299px;
+    left: 339px;
+    z-index: 13;
+    font-size: 12px;
+    letter-spacing: 2px;
+    left: 67px;
+    top: 495px;
+    font-style: italic;
+    color: #03A9F4;
+   
+    
+}
+
+
+ 
+    
 
   
-    
- #title {
-    font-size: 36px;
-    letter-spacing: 2px;
-    top: 138px;
-    left: 552px;
-    height: 49%;
-    z-index: 18;
-    font-style: italic;
-    color: #35a5d4;
-    position: fixed;
-    max-height: 111px;
-    max-width: 362px;
-  }
-
    #side-edit{
     font-size: 45px;
     letter-spacing: 17px;
@@ -298,85 +677,78 @@ body{
     z-index: 4;
     font-style: italic;
     position: fixed;
+    border-color: transparent;
   }
 
-    #try-box {
-    top: 20px;
-    left: 40px;
+  #servings {
     position: fixed;
-    }
-   
-  #directions {
-    position: fixed;
-    left: 555px;
-    font-size: 13px;
-    top: 133px;
+    left: 314px;
+    font-size: 17px;
+    top: 104px;
     letter-spacing: 1px;
     font-style: italic;
-    color: black;
-    font-family: "Courier New";
-    overflow: scroll;
-    max-width: 605px;
-    min-height: 165px;
+    /* border-bottom-style: double; */
+    border-radius: 10px;
+    border-color: #03A9F4;
+    border-style: solid;
+    border-width: thin;
+}
+
+
+ #servings::-webkit-input-placeholder {
+    color: #03A9F4;
+  }
+
+  #servings::-moz-placeholder {
+    color: #03A9F4;
+  }
+
+  #servings:-moz-placeholder {
+    color: #03A9F4;
+  }
+  #servings:-ms-input-placeholder {
+    color: #03A9F4;
   }
 
 
 
-#story {
-    position: fixed;
-    left: 97px;
-    font-size: 13px;
-    top: 199px;
+  #eservings {
+      position: fixed;
+    left: 814px;
+    font-size: 17px;
+    top: 56px;
     letter-spacing: 1px;
     font-style: italic;
-    color: black;
-    font-family: "Courier New";
-    overflow: scroll;
-    max-width: 605px;
-    min-height: 165px;
-    overflow: scroll;
-  }
+    color: #03A9F4;
+}
 
-  #ingredients {
+
+
+#recipes-container {
     position: fixed;
-    left: 555px;
-    font-size: 13px;
-    top: 200px;
+    left: 651px;
+    font-size: 23px;
+    top: 312px;
+    letter-spacing: 1px;
+    /* font-style: italic; */
+    color: white;
+}
+
+ #user-recipes-container {
+    position: fixed;
+    left: 344px;
+    font-size: 23px;
+    top: 310px;
     letter-spacing: 1px;
     font-style: italic;
-    color: black;
-    font-family: "Courier New";
-    overflow: scroll;
-    max-width: 605px;
-    min-height: 165px;
-  }
-   
-
-   #servings {
-    position: fixed;
-    left: 991px;
-    font-size: 22px;
-    top: 152px;
-    letter-spacing: 1px;
-    font-style: italic;
-  }
-  
-  #recipes-container {
-    position: fixed;
-    left: 391px;
-    font-size: 22px;
-    top: 252px;
-    letter-spacing: 1px;
-    font-style: italic;
-    color:black;
-
-  }
+    color: white;
+}
   
   .recipes {
    
+    
     left: 391px;
-    font-size: 22px;
-   
+    font-size: 16px;
     letter-spacing: 1px;
     font-style: italic;
     
@@ -384,7 +756,7 @@ body{
   }
   
   .my_recipes {
-    color:red;
+    color:white;
 
   }
    
@@ -395,50 +767,7 @@ body{
     top: 411px;
    }
 
-#nutrition {
-  position: fixed;
-  left: 1124px;
-  font-size: 22px;
-  top: 511px;
-
-
-}
-
-
-
-  
-
-
-  #password_new {
-    position:fixed;
-    left:244px;
-    top:535px;
-    width:858px;
-    height:34px;
-    font-size: 16px;
-    line-height: 1.3;
-    font-style:italic;
-    border-bottom:2px solid white;
-    background-color: #ffa834;
-    color:white;
-    font-family: Audiowide;
-    border-style:none none solid none;
-  }
-  
-  #password_new::-webkit-input-placeholder{
-    color:white;
-  }
-  
-  #password_new::-moz-placeholder {
-    color:white;
-  }
-
-  #password_new:-moz-placeholder {
-    color:white;
-  }
-  #password_new:-ms-input-placeholder {
-    color: white;
-  }
+ 
   
   #please-sign-up {
     position:fixed;

@@ -1,21 +1,33 @@
+<style>
 
+#try-box {
+  display:none;
+}
+
+body {
+  background-color: white;
+
+}
+
+</style>
+<div id="back-to-recipe-index"><a href="/recipes">federicindice</a></div>
 
 <div id="name"><%= @recipe.user.username %></div>
 <!--  TITLE -->
 
 <!--TEXT
  -->  
-<div id="directions"><%= h(@recipe.directions).gsub(/\n/, '<br/>') %></div><br>
+<div id="edirections"><%= h(@recipe.directions).gsub(/\n/, '<br/>') %></div><br>
    
 
-<div id="title"><%= @recipe.title %></div>
+<div id="etitle"><%= @recipe.title %></div>
 
-<div id="servings"> servings <%= @recipe.servings%></div>
+<div id="eservings"> servings <%= @recipe.servings%></div>
 
-<div id="ingredients"><%= @recipe.ingredients %></div><br>
-<div id="directions"><%= @recipe.directions %></div><br>
-<div id="story"><%= @recipe.story %></div><br>
-<div id="video_link"><%= @recipe.video_link %></div><br>
+<div id="eingredients"><%= @recipe.ingredients %></div><br>
+<div id="edirections"><%= @recipe.directions %></div><br>
+<div id="estory"><%= @recipe.story %></div><br>
+<div id="evideo_link"><%= @recipe.video_link %></div><br>
 
 <%if @recipe.user_id == current_user.id%>
   <div id="side-edit"><a href='/recipes/<%=@recipe.id%>/edit'>EDIT</a></div>
@@ -25,7 +37,7 @@
   <form method="post" action="/recipes/<%= @recipe.id %>">
 
     <input type="hidden" name="_method" id="hidden" value="DELETE"></input>
-    <input type="submit" value="delete"></input>
+    <input type="submit" id="delete_button" value="delete"></input>
   
   </form>
         

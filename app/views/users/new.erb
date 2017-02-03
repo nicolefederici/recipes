@@ -2,8 +2,8 @@
 
   
 </style>
-<div id="try-box">federici recipes</div>
-<div id="subtitle"> tried and true recipes from the family collection</div>
+<div id="try-box">federicette</div>
+<div id="subtitle"> with related stories and video clips</div>
 
 
 <% if session[:username_taken] == true %>
@@ -11,12 +11,12 @@
 <% end %>
 
 <form method="post" action="/signup">
-  <input id="name" type="text" name="username" placeholder="username">
+  <input id="name_signup" type="text" name="username" placeholder="username">
   
   <input id="email" type="text" name="email" placeholder="email">
   
   <input id="password_new" type="password" name="password" placeholder="password">
  
 
-  <input  type="submit" value="sign-up">
+  <input id="signup_button" type="submit" value="sign-up">
 </form>
