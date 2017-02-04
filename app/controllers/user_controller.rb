@@ -1,5 +1,5 @@
 
-require 'rack-flash'
+require 'sinatra/flash'
 
 class UserController < ApplicationController
 

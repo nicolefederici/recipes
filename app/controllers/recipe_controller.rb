@@ -1,6 +1,6 @@
 
 
-require 'rack-flash'
+require 'sinatra/flash'
 class RecipeController < ApplicationController 
 
 
