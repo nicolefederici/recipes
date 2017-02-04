@@ -867,7 +867,20 @@ top: 179px;
     font-family: Audiowide;
     z-index: 4;
   }
-
+#flash {
+  position:fixed;
+    left:240px;
+    top:400px;
+    width:680px;
+    height:20px;
+    font-size: 12px;
+    font-style:italic;
+    letter-spacing: 3px;
+    background-color: transparent;
+    color: #a3e0fb;
+    font-family: Audiowide;
+    z-index: 4;
+}
 
   
 

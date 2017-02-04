@@ -9,3 +9,9 @@
   </input>
    <input id="button" type="submit" value="login">
 </form>
+
+<div id="flash">
+  <% if flash[:message] %>
+  <%= flash[:message] %>
+  <%end%>
+    </div>

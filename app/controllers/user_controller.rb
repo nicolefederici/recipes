@@ -1,3 +1,6 @@
+
+require 'rack-flash'
+
 class UserController < ApplicationController
 
   get '/signup' do
