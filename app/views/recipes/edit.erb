@@ -1,36 +1,34 @@
 <style>
-body {
-  background-color: white;
-}
+  
+  body {
+    background-color: white;
+  }
 
-#try-box {
-  display: none;
-}
+  #try-box {
+    display: none;
+  }
 
 </style>
 
+
+
+
 <div id="back-to-recipe-index"><a href="/recipes">federicindice</a></div>
  
- <form method="post" action="/recipes/<%= @recipe.id %>">
+<form method="post" action="/recipes/<%= @recipe.id %>">
   <input id="hidden" type="hidden" name="_method" value="PUT">
-  
   <input id="title" type="text" name="title" value="<%= @recipe.title %>"></div>
   <input id="servings" type="text" name="servings" value="<%= @recipe.servings %>">
   <input id="nutrition" type="text" name="nutrition" value="<%= @recipe.nutrition %>">
-
-
-
-
   <textarea id="ingredients" type="text" name="ingredients"><%= @recipe.ingredients %></textarea>
   <textarea id="directions"type="text" name="directions"><%= @recipe.directions %></textarea>
   <textarea id="story" type="text" name="story"><%= @recipe.story %></textarea>
-
-  
   <input id="video_link" type="url" name="video_link" value="<%= @recipe.video_link %>">
-  
   
   <input id="add_recipe_button" type="submit" value="edit recipe">
 </form>
+
+<div id="flash"><% if flash[:message] %><%= flash[:message] %><%end%></div>
 
 
 

@@ -8,31 +8,17 @@
 
   </head>
   <body>
-  
-  
-  
- 
-    
-     <nav>
+    <nav>
       <% if logged_in? %>
         <div id="log-out"><a href="/logout"> log-out, </a>
         <%= current_user.username %></div>
       <%end %>
     </nav>
 
-     <div id="try-box">federicette</div>
+    <div id="try-box">federicette</div>
       
       <%= yield %> 
-       
-     
-    
-    <!-- this is the copyright -->
-    <div id="copyright"> &copy; Nicole Federici 2016</div>
-    
-
-    
   
-
-  </body>
-
+      <div id="copyright"> &copy; Nicole Federici 2016</div>
+    </body>
 </html>

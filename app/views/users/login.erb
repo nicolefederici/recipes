@@ -1,17 +1,9 @@
+<div id="subtitle"> with related stories and video clips</div>
+<div id="sign-up"><a href="/signup">or sign-up</a></div>
+  <form method="post" action="/login">
+    <input id="name_login" type="text" name="username" placeholder="username">
+    <input id="password" type="password" name="password" placeholder="password">
+    <input id="button" type="submit" value="login">
+  </form>
 
-
-  
-  <div id="subtitle"> with related stories and video clips</div>
-  <div id="sign-up"><a href="/signup">or sign-up</a></div>
-<form method="post" action="/login">
-  <input id="name_login" type="text" name="username" placeholder="username"><br><br><br>
-  <input id="password" type="password" name="password" placeholder="password"><br><br><br>
-  </input>
-   <input id="button" type="submit" value="login">
-</form>
-
-<div id="flash">
-  <% if flash[:message] %>
-  <%= flash[:message] %>
-  <%end%>
-    </div>
+<div id="flash"><% if flash[:message] %><%= flash[:message] %><%end%></div>

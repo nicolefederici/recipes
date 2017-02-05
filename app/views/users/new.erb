@@ -1,22 +1,15 @@
-
-
-  
-</style>
 <div id="try-box">federicette</div>
 <div id="subtitle"> with related stories and video clips</div>
-
-
-<% if session[:username_taken] == true %>
-  <div id="duplicate-name-error">Somebody's already grabbed that kick-butt username. Pick your own!</div>
-<% end %>
-
-<form method="post" action="/signup">
-  <input id="name_signup" type="text" name="username" placeholder="username">
+  <% if session[:username_taken] == true %>
+    <div id="duplicate-name-error">Somebody's already grabbed that kick-butt username. Pick your own!</div>
+  <% end %>
   
-  <input id="email" type="text" name="email" placeholder="email">
-  
-  <input id="password_new" type="password" name="password" placeholder="password">
- 
+  <form method="post" action="/signup">
+    <input id="name_signup" type="text" name="username" placeholder="username">
+    <input id="email" type="text" name="email" placeholder="email">
+    <input id="password_new" type="password" name="password" placeholder="password">
+   
+    <input id="signup_button" type="submit" value="sign-up">
+  </form>
 
-  <input id="signup_button" type="submit" value="sign-up">
-</form>
+ <div id="flash"><% if flash[:message] %><%= flash[:message] %><%end%></div>

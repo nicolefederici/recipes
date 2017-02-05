@@ -1,12 +1,6 @@
-
-
-require 'sinatra/flash'
 class RecipeController < ApplicationController 
 
-
-
-
-  # index route
+ # index route
 
   get '/recipes' do
     @recipes = Recipe.all 
@@ -43,9 +37,7 @@ class RecipeController < ApplicationController
       @recipe = Recipe.new(params)
       @recipe.user_id = current_user.id
       if @recipe.save 
-       
-
-        # flash[:notice] = "#{@recipe.name} was created"
+       flash[:message] = "#{@recipe.title} was created"
         redirect to "/recipes/#{@recipe.id}"
       else 
          flash[:message] = @recipe.errors.full_messages
@@ -59,7 +51,6 @@ class RecipeController < ApplicationController
   # edit route 
   get '/recipes/:id/edit' do 
     if logged_in?
-
       @recipe = Recipe.find_by_id(params[:id])
       if @recipe 
         erb :'/recipes/edit'
@@ -77,10 +68,10 @@ class RecipeController < ApplicationController
       @recipe = Recipe.find_by_id(params[:id])
       if @recipe.user_id == current_user.id
         if @recipe.update(title: params[:title], ingredients: params[:ingredients], directions: params[:directions], nutrition: params[:nutrition], servings: params[:servings], story: params[:story], video_link:params[:video_link])
-           flash[:message] = "#{@recipe.name} was successfully updated!"
-          redirect to "/recipes/#{@recipe.id}"
+           flash[:message] = "#{@recipe.title} was successfully updated!"
+           redirect to "/recipes/#{@recipe.id}"
         else 
-          flash[:message] = @recipe.errors.full_messages
+          flash[:message] = @recipe.errors.full_messages.join("|")
           redirect to "/recipes/#{@recipe.id}/edit"
         end
       else 
@@ -98,7 +89,7 @@ class RecipeController < ApplicationController
       if @recipe.user == current_user 
         if @recipe 
           @recipe.destroy 
-          flash[:message] = "#{@recipe.name} was destroyed!"
+          flash[:message] = "#{@recipe.title} was destroyed!"
         else 
           flash[:message] = "Unable to find that recipe"
         end
@@ -119,6 +110,4 @@ end
 
 
 
-#A non logged in user can see all recipes and look at an individual recipe 
-#A logged in user can see their recipes in a list that say their recipes 
-#and they can create, edit and delete recipes that only they created
+

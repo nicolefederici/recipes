@@ -1,12 +1,11 @@
 <style>
-#try-box {
-  display:none;
-}
+  #try-box {
+    display:none;
+  }
 
-body {
-  background-color: white;
-
-}
+  body {
+    background-color: white;
+  }
 
 </style>
 
@@ -18,17 +17,11 @@ body {
   <input id="servings" type="number" name="servings" placeholder="servings"></input><br>
   <textarea id="nutrition" type="text" name="nutrition" placeholder="nutrition"></textarea><br>
   <textarea id="story" type="text" name="story" placeholder="story"></textarea><br>
-  
   <input id="video_link" type="url" name="video_link" placeholder="video link">
-  
-  
-  
-
-  
   <input id="add_recipe_button" type="submit" value="add recipe">
 </form>
 
-
+<div id="flash"><% if flash[:message] %><%= flash[:message] %><%end%></div>
 
 
  

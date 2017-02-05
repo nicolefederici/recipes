@@ -1,18 +1,20 @@
 <div id="user-recipes-container"><%=current_user.username%>'s 
-    <% @recipes.each do |recipe| %>
+  <% @recipes.each do |recipe| %>
     <% if recipe.user_id == current_user.id %>
       <div class="recipes"><a href="/recipes/<%=recipe.id%>"><%= recipe.title %></a></div>
-    <% end %><% end %></div>
+    <% end %>
+  <% end %>
+</div>
 
-    <div id="recipes-container"> everyone else's 
-      <% @recipes.each do |recipe| %>
+<div id="recipes-container"> everyone else's 
+  <% @recipes.each do |recipe| %>
     <% if recipe.user_id != current_user.id %>
       <div class="recipes"><a href="/recipes/<%=recipe.id%>"><%= recipe.title %></a></div>
-    <% end %><% end %></div>
-    
-    <div id="create-recipe"><a href='/recipes/new'>create a new one</a></div>
+    <% end %>
+  <% end %>
+</div>
 
-    
-    
-       <div id="flash"><% if flash[:message] %><%= flash[:message] %><%end%>
-    </div>
+<div id="create-recipe"><a href='/recipes/new'>create a new one</a></div>
+
+
+<div id="flash"><% if flash[:message] %><%= flash[:message] %><%end%></div>

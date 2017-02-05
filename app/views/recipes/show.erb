@@ -1,56 +1,50 @@
 <style>
 
-#try-box {
-  display:none;
-}
+  #try-box {
+    display:none;
+  }
 
-body {
-  background-color: white;
-
-}
+  body {
+    background-color: white;
+  }
 
 </style>
-<div id="back-to-recipe-index"><a href="/recipes">federicindice</a></div>
 
+
+<div id="back-to-recipe-index"><a href="/recipes">federicindice</a></div>
 <div id="name"><%= @recipe.user.username %></div>
 <!--  TITLE -->
- <div id="enutrition_wrapper"><div id="enutrition" type="text" name="nutrition"><%= @recipe.nutrition %></div></div>
+<div id="enutrition_wrapper">
+  <div id="enutrition" type="text" name="nutrition"><%= @recipe.nutrition %></div>
+</div>
 <!--TEXT
  -->  
 <div id="edirections_wrapper">
   <div id="edirections"><%= h(@recipe.directions).gsub(/\n/, '<br/>') %></div>
 </div>
    
-
 <div id="etitle"><%= @recipe.title %></div>
-
 <div id="eservings"> servings <%= @recipe.servings%></div>
 
 <div id="eingredients_wrapper">
   <div id="eingredients"><%= @recipe.ingredients %></div>
 </div>
-<!-- <div id="edirections"><%= @recipe.directions %></div><br>
- -->
-
- <div id="estory_wrapper"><div id="estory"><%= @recipe.story %></div><br>
-<div id="evideo_link"><%= @recipe.video_link %></div></div>
+<div id="estory_wrapper">
+  <div id="estory"><%= @recipe.story %></div><br>
+  <div id="evideo_link"><%= @recipe.video_link %></div>
+</div>
 
 <%if @recipe.user_id == current_user.id%>
   <div id="side-edit"><a href='/recipes/<%=@recipe.id%>/edit'>EDIT</a></div>
-
-
   <div id="delete">
-  
-  <form method="post" action="/recipes/<%= @recipe.id %>">
-
-    <input type="hidden" name="_method" id="hidden" value="DELETE"></input>
-    <input type="submit" id="delete_button" value="delete"></input>
-  
-  </form>
-        
+    <form method="post" action="/recipes/<%= @recipe.id %>">
+      <input type="hidden" name="_method" id="hidden" value="DELETE"></input>
+      <input type="submit" id="delete_button" value="delete"></input>
+    </form>
   </div> 
-  <%end%>
+<%end%>
 
+<div id="flash"><% if flash[:message] %><%= flash[:message] %><%end%></div>
 
 
  

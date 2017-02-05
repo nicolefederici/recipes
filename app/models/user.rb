@@ -7,12 +7,14 @@ class User <ActiveRecord::Base
 
   validates :email, :username, uniqueness: true
 
-  def slug #when I use this method for slugging users' names in more routes that offer users more functionality, I won't use "title" I will use username.whatever...so this is kind of an armiture for something I'm about to build next. 
-    title.strip.downcase.gsub(/(&|&amp;)/, ' and ').gsub(/[\s\.\/\\]/, '-').gsub(/[^\w-]/, '').gsub(/[-_]{2,}/, '-').gsub(/^[-_]/, '').gsub(/[-_]$/, '')
-  end
-#this too, actually
-  def self.find_by_slug(slug)
-    User.all.find {|user| user.slug == slug}
-  end
+
+#not currently using slugs in the application, but still considering it. 
+#   def slug #when I use this method for slugging users' names in more routes that offer users more functionality, I won't use "title" I will use username.whatever...so this is kind of an armiture for something I'm about to build next. 
+#     title.strip.downcase.gsub(/(&|&amp;)/, ' and ').gsub(/[\s\.\/\\]/, '-').gsub(/[^\w-]/, '').gsub(/[-_]{2,}/, '-').gsub(/^[-_]/, '').gsub(/[-_]$/, '')
+#   end
+# #this too, actually
+#   def self.find_by_slug(slug)
+#     User.all.find {|user| user.slug == slug}
+#   end
 
 end

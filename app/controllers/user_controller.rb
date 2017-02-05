@@ -1,5 +1,4 @@
 
-require 'sinatra/flash'
 
 class UserController < ApplicationController
 
@@ -18,6 +17,7 @@ class UserController < ApplicationController
         session[:user_id] = @user.id
         redirect to '/recipes'
       else 
+        flash[:message] = @user.errors.full_messages.join("|")
         redirect to '/signup'
       end
     end
