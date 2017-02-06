@@ -422,9 +422,9 @@ transition: initial;
 }
 
 #enutrition_wrapper {
-  position:fixed;
+  position: fixed;
   left: 416px;
-  top: 377px;
+  top: 532px;
 }
   
 #enutrition {
@@ -548,7 +548,8 @@ transition: initial;
   color: #03A9F4;
   overflow: auto;
   width: 385px;
-  min-height: 165px;
+  min-height: 265px;
+  height: 165px;
 }
 
   
@@ -734,7 +735,22 @@ top: 179px;
   font-style: italic;
   color: white;
 }
-  
+
+
+#create-recipe {
+  font-family: 'Warnes', cursive;
+  font-size: 19px;
+  color: white;
+  left: 520px;
+  top: 261px;
+  /* min-height: 269px; */
+  overflow: auto;
+  position: fixed;
+  /* right: 743px; */
+  /* max-height: 275px; */
+  letter-spacing: 2px;
+}
+ 
 .recipes { 
   left: 391px;
   font-size: 16px;

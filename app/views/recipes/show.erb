@@ -27,11 +27,11 @@
 <div id="eservings"> servings <%= @recipe.servings%></div>
 
 <div id="eingredients_wrapper">
-  <div id="eingredients"><%= @recipe.ingredients %></div>
+  <div id="eingredients"><%= h(@recipe.ingredients).gsub(/\n/, '<br/>') %></div>
 </div>
 <div id="estory_wrapper">
-  <div id="estory"><%= @recipe.story %></div><br>
-  <div id="evideo_link"><%= @recipe.video_link %></div>
+  <div id="estory"><%= h(@recipe.story).gsub(/\n/, '<br/>') %></div><br>
+  <div id="evideo_link"><a target="_blank" href="<%= @recipe.video_link %>"><%= @recipe.video_link %></a></div>
 </div>
 
 <%if @recipe.user_id == current_user.id%>
