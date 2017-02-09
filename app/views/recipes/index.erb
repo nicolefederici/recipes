@@ -1,14 +1,16 @@
-<div id="user-recipes-container"><%=current_user.username%>'s 
-  <% @recipes.each do |recipe| %>
-    <% if recipe.user_id == current_user.id %>
-      <div class="recipes"><a href="/recipes/<%=recipe.id%>"><%= recipe.title %></a></div>
+<% if logged_in? %>
+  <div id="user-recipes-container"><%=current_user.username%>'s 
+    <% @recipes.each do |recipe| %> 
+      <% if recipe.user_id == current_user.id %>
+        <div class="recipes"><a href="/recipes/<%=recipe.id%>"><%= recipe.title %></a></div>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>
+<% end %>
 
 <div id="recipes-container"> everyone else's 
   <% @recipes.each do |recipe| %>
-    <% if recipe.user_id != current_user.id %>
+    <% if current_user.nil? || recipe.user_id != current_user.id %>
       <div class="recipes"><a href="/recipes/<%=recipe.id%>"><%= recipe.title %></a></div>
     <% end %>
   <% end %>
