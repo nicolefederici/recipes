@@ -14,7 +14,7 @@ class ApplicationController < Sinatra::Base
     set :session_secret, "zounds"
   end
   
-  register Sinatra::Flash 
+  register Sinatra::Flash   
 
 #I put the slash route in the application controller because it has no loyalties. One has to start here.
   
@@ -26,13 +26,18 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-   helpers do
-    def logged_in?
-      !!session[:user_id]
+#if the database resided on a different system from my application, rather than a local storage type thing like I have here, with my old method for current user, I'd be communicating over the network to the other system every time it is called, which would slow the app down?
+
+ 
+
+  helpers do
+    def current_user
+      @current_user ||= User.find(session[:user_id]) unless session[:user_id].nil?
     end
 
-    def current_user
-      User.find(session[:user_id])
+    def logged_in?
+      !!current_user
     end
   end
+  
 end

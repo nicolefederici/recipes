@@ -1,8 +1,6 @@
 <div id="try-box">federicette</div>
 <div id="subtitle"> with related stories and video clips</div>
-  <% if session[:username_taken] == true %>
-    <div id="duplicate-name-error">Somebody's already grabbed that kick-butt username. Pick your own!</div>
-  <% end %>
+  
   
   <form method="post" action="/signup">
     <input id="name_signup" type="text" name="username" placeholder="username">
