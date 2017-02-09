@@ -34,8 +34,11 @@ class RecipeController < ApplicationController
   # create route 
   post '/recipes' do
     if logged_in? 
-      @recipe = Recipe.new(params)
-      @recipe.user_id = current_user.id
+      
+      @recipe = current_user.recipes.build(params)
+      #this build method (adds another one onto the collection proxy that is whomever's recipes), AKA: it takes the place of these next two lines by doing them together in one action.
+      # @recipe = Recipe.new(params)
+      # @recipe.user_id = current_user.id
       if @recipe.save 
        flash[:message] = "#{@recipe.title} was created"
         redirect to "/recipes/#{@recipe.id}"
