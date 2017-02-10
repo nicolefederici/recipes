@@ -34,7 +34,7 @@
   <div id="evideo_link"><a target="_blank" href="<%= @recipe.video_link %>"><%= @recipe.video_link %></a></div>
 </div>
 
-<%if @recipe.user_id == current_user.id%>
+<%if logged_in? && @recipe.user_id == current_user.id%>
   <div id="side-edit"><a href='/recipes/<%=@recipe.id%>/edit'>EDIT</a></div>
   <div id="delete">
     <form method="post" action="/recipes/<%= @recipe.id %>">
@@ -44,7 +44,7 @@
   </div> 
 <%end%>
 
-<div id="flash"><% if flash[:message] %><%= flash[:message] %><%end%></div>
+
 
 
  
