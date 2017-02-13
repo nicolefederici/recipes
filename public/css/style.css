@@ -425,18 +425,20 @@ transition: initial;
   position: fixed;
   left: 416px;
   top: 532px;
+  max-width:200px;
 }
   
 #enutrition {
-  position: absolute;
-  font-size: 13px;
-  height: 200px;
-  font-family: 'Roboto',monospace;
-  font-style: italic;
-  letter-spacing: 1px;
-  overflow: auto;
-  border-color: transparent;
-  color: #03a9f4;
+    position: absolute;
+    font-size: 13px;
+    height: 200px;
+    font-family: 'Roboto',monospace;
+    font-style: italic;
+    letter-spacing: 1px;
+    overflow: auto;
+    border-color: transparent;
+    color: #03a9f4;
+    width: 200px;
 }
 
 #directions {  
@@ -708,34 +710,59 @@ top: 179px;
 }
 
 #eservings {
-  position: fixed;
-  left: 814px;
-  font-size: 17px;
-  top: 56px;
-  letter-spacing: 1px;
-  font-style: italic;
-  color: #03A9F4;
+    position: fixed;
+    left: 1121px;
+    font-size: 17px;
+    top: 53px;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: #03A9F4;
 }
 
 #recipes-container {
-  position: fixed;
-  left: 651px;
-  font-size: 23px;
-  top: 312px;
-  letter-spacing: 1px;
-  color: white;
+    position: fixed;
+    left: 651px;
+    font-size: 23px;
+    top: 341px;
+    letter-spacing: 1px;
+    color: white;
+    max-height: 220px;
+    overflow: auto;
+}
+
+#others {
+      color: white;
+    font-family: roboto;
+    font-size: 21px;
+    letter-spacing: 6px;
+    position: fixed;
+    top: 312px;
+    left: 651px;
+
+
 }
 
 #user-recipes-container {
-  position: fixed;
-  left: 344px;
-  font-size: 23px;
-  top: 310px;
-  letter-spacing: 1px;
-  font-style: italic;
-  color: white;
+     position: fixed;
+    left: 344px;
+    font-size: 23px;
+    top: 341px;
+    letter-spacing: 1px;
+    font-style: italic;
+    color: white;
+    max-height: 187px;
+    overflow: auto;
 }
 
+#owner {
+     color: white;
+    font-family: roboto;
+    font-size: 21px;
+    letter-spacing: 6px;
+    position: fixed;
+    top: 312px;
+    left: 343px;
+}
 
 #create-recipe {
   font-family: 'Warnes', cursive;

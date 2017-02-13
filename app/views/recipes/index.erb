@@ -1,5 +1,6 @@
 <% if logged_in? %>
-  <div id="user-recipes-container"><%=current_user.username%>'s 
+  <div id="owner"><%=current_user.username%>'s</div> 
+  <div id="user-recipes-container">
     <% @recipes.each do |recipe| %> 
       <% if recipe.user_id == current_user.id %>
         <div class="recipes"><a href="/recipes/<%=recipe.id%>"><%= recipe.title %></a></div>
@@ -8,7 +9,8 @@
   </div>
 <% end %>
 
-<div id="recipes-container"> everyone else's 
+<div id="others">everyone else's </div>
+<div id="recipes-container"> 
   <% @recipes.each do |recipe| %>
     <% if current_user.nil? || recipe.user_id != current_user.id %>
       <div class="recipes"><a href="/recipes/<%=recipe.id%>"><%= recipe.title %></a></div>
